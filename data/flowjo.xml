@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?><Workspace origin="Stanford FACS Datastore" version="20.0">
+<SampleList>
+<Sample>
+<Keywords>
+<Keyword name="P1BS" value="0"/>
+<Keyword name="CST SETUP STATUS" value="SUCCESS WITH WARNING"/>
+<Keyword name="$BEGINDATA" value="2560"/>
+<Keyword name="$P6V" value="333"/>
+<Keyword name="SPECIMEN NAME" value="Specimen_001"/>
+<Keyword name="$P6R" value="262144"/>
+<Keyword name="P9MS" value="0"/>
+<Keyword name="$TOT" value="10000              "/>
+<Keyword name="CST SETUP DATE" value="2017-10-23T10:01:43-07:00"/>
+<Keyword name="$P6N" value="SSC-W"/>
+<Keyword name="APPLY COMPENSATION" value="TRUE"/>
+<Keyword name="P6BS" value="-1"/>
+<Keyword name="$P6G" value="1.0"/>
+<Keyword name="$P6E" value="0,0"/>
+<Keyword name="$P6B" value="32"/>
+<Keyword name="CST BASELINE DATE" value="2017-09-05T09:15:01-07:00"/>
+<Keyword name="LASER3ASF" value="0.72"/>
+<Keyword name="P5MS" value="0"/>
+<Keyword name="$P5V" value="333"/>
+<Keyword name="$BEGINANALYSIS" value="0"/>
+<Keyword name="TUBE NAME" value="NC"/>
+<Keyword name="LASER1NAME" value="Blue"/>
+<Keyword name="$P5R" value="262144"/>
+<Keyword name="P2BS" value="-1"/>
+<Keyword name="$ETIM" value="10:29:27"/>
+<Keyword name="$MODE" value="L"/>
+<Keyword name="$P5N" value="SSC-A"/>
+<Keyword name="$CELLS" value="NC"/>
+<Keyword name="$P5G" value="1.0"/>
+<Keyword name="$P5E" value="0,0"/>
+<Keyword name="$OP" value="FACS User"/>
+<Keyword name="$P5B" value="32"/>
+<Keyword name="SPILL" value="2,FITC-A,APC-A,1,0,0,1"/>
+<Keyword name="P1MS" value="0"/>
+<Keyword name="$BEGINSTEXT" value="0"/>
+<Keyword name="$SYS" value="Windows 7 6.1"/>
+<Keyword name="$DATATYPE" value="F"/>
+<Keyword name="P7BS" value="-1"/>
+<Keyword name="$ENDANALYSIS" value="0"/>
+<Keyword name="P5DISPLAY" value="LIN"/>
+<Keyword name="$P4V" value="60"/>
+<Keyword name="$TIMESTEP" value="0.01"/>
+<Keyword name="$PAR" value="9"/>
+<Keyword name="$P4R" value="262144"/>
+<Keyword name="$ENDSTEXT" value="0"/>
+<Keyword name="LASER2ASF" value="0.65"/>
+<Keyword name="$P4N" value="FSC-H"/>
+<Keyword name="$NEXTDATA" value="0"/>
+<Keyword name="LASER2DELAY" value="40.43"/>
+<Keyword name="P2DISPLAY" value="LIN"/>
+<Keyword name="P6MS" value="0"/>
+<Keyword name="P6DISPLAY" value="LIN"/>
+<Keyword name="CST REGULATORY STATUS" value="RUO Performance Check"/>
+<Keyword name="$EXP" value="Zhang, Yunxiao"/>
+<Keyword name="$P4G" value="1.0"/>
+<Keyword name="$P4E" value="0,0"/>
+<Keyword name="P3BS" value="-1"/>
+<Keyword name="$P4B" value="32"/>
+<Keyword name="P3DISPLAY" value="LIN"/>
+<Keyword name="$SRC" value="Specimen_001"/>
+<Keyword name="$INST" value=" "/>
+<Keyword name="WINDOW EXTENSION" value="2.0"/>
+<Keyword name="CYTOMETER CONFIG CREATE DATE" value="2016-12-14T11:58:29-08:00"/>
+<Keyword name="$P3V" value="60"/>
+<Keyword name="$PROJ" value="20171023_Ptc"/>
+<Keyword name="$P3R" value="262144"/>
+<Keyword name="P2MS" value="0"/>
+<Keyword name="P8BS" value="-1"/>
+<Keyword name="P8DISPLAY" value="LOG"/>
+<Keyword name="$P3N" value="FSC-W"/>
+<Keyword name="EXPERIMENT NAME" value="20171023_Ptc"/>
+<Keyword name="EXPORT TIME" value="23-OCT-2017-10:29:17"/>
+<Keyword name="$P3G" value="1.0"/>
+<Keyword name="$P9V" value="528"/>
+<Keyword name="LASER2NAME" value="Red"/>
+<Keyword name="$P3E" value="0,0"/>
+<Keyword name="EXPORT USER NAME" value="Yunxiao"/>
+<Keyword name="CYTOMETER CONFIG NAME" value="New Configuration 6B 3Red 3 V 70um"/>
+<Keyword name="$P9R" value="262144"/>
+<Keyword name="LASER1ASF" value="0.72"/>
+<Keyword name="$P3B" value="32"/>
+<Keyword name="P9DISPLAY" value="LOG"/>
+<Keyword name="$P9N" value="APC-A"/>
+<Keyword name="P7MS" value="0"/>
+<Keyword name="$DATE" value="24-OCT-2017"/>
+<Keyword name="$BYTEORD" value="4,3,2,1"/>
+<Keyword name="$P9G" value="1.0"/>
+<Keyword name="$P2V" value="60"/>
+<Keyword name="P4BS" value="-1"/>
+<Keyword name="$P9E" value="0,0"/>
+<Keyword name="$P2R" value="262144"/>
+<Keyword name="$P9B" value="32"/>
+<Keyword name="FSC ASF" value="0.71"/>
+<Keyword name="$P2N" value="FSC-A"/>
+<Keyword name="$ENDDATA" value="362559"/>
+<Keyword name="THRESHOLD" value="FSC,5000"/>
+<Keyword name="$P2G" value="1.0"/>
+<Keyword name="$P8V" value="440"/>
+<Keyword name="$P2E" value="0,0"/>
+<Keyword name="P3MS" value="0"/>
+<Keyword name="$P8R" value="262144"/>
+<Keyword name="$P2B" value="32"/>
+<Keyword name="P9BS" value="-1"/>
+<Keyword name="CREATOR" value="BD FACSDiva Software Version 8.0.1"/>
+<Keyword name="$P8N" value="FITC-A"/>
+<Keyword name="$CYT" value="Godzilla"/>
+<Keyword name="GUID" value="c5ea7b53-e1ed-405a-a824-f70495b05ddf"/>
+<Keyword name="$P8G" value="1.0"/>
+<Keyword name="LASER3DELAY" value="-39.76"/>
+<Keyword name="SETTINGS" value="Cytometer"/>
+<Keyword name="$P8E" value="0,0"/>
+<Keyword name="$P1R" value="262144"/>
+<Keyword name="$P8B" value="32"/>
+<Keyword name="P8MS" value="0"/>
+<Keyword name="AUTOBS" value="TRUE"/>
+<Keyword name="$P1N" value="Time"/>
+<Keyword name="$BTIM" value="21:34:50"/>
+<Keyword name="P5BS" value="-1"/>
+<Keyword name="$P1G" value="0.01"/>
+<Keyword name="$P7V" value="333"/>
+<Keyword name="CST PERFORMANCE EXPIRED" value="2017-10-24T10:01:43-07:00"/>
+<Keyword name="$P1E" value="0,0"/>
+<Keyword name="$P7R" value="262144"/>
+<Keyword name="$P1B" value="32"/>
+<Keyword name="CST BEADS EXPIRED" value="2"/>
+<Keyword name="$SMNO" value="1-1"/>
+<Keyword name="$P7N" value="SSC-H"/>
+<Keyword name="CST BEADS LOT ID" value="70106"/>
+<Keyword name="LASER3NAME" value="Violet"/>
+<Keyword name="$P7G" value="1.0"/>
+<Keyword name="P4MS" value="0"/>
+<Keyword name="$P7E" value="0,0"/>
+<Keyword name="$FIL" value="36468.fcs"/>
+<Keyword name="LASER1DELAY" value="0.0"/>
+<Keyword name="$P7B" value="32"/>
+</Keywords>
+<DataSet sampleID="1" uri="https://FACSDATA.Stanford.EDU:8443/ERS/data/o%3DStanford%20University/ou%3DStem%20Cell%20Institute/uid%3Dyunxiao/journal%3DGodzilla/session%3D4045/file%3D1-1.fcs"/>
+</Sample>
+<Sample>
+<Keywords>
+<Keyword name="P1BS" value="0"/>
+<Keyword name="CST SETUP STATUS" value="SUCCESS WITH WARNING"/>
+<Keyword name="$BEGINDATA" value="2560"/>
+<Keyword name="$P6V" value="333"/>
+<Keyword name="SPECIMEN NAME" value="Specimen_001"/>
+<Keyword name="$P6R" value="262144"/>
+<Keyword name="P9MS" value="0"/>
+<Keyword name="$TOT" value="10000              "/>
+<Keyword name="CST SETUP DATE" value="2017-10-23T10:01:43-07:00"/>
+<Keyword name="$P6N" value="SSC-W"/>
+<Keyword name="APPLY COMPENSATION" value="TRUE"/>
+<Keyword name="P6BS" value="0"/>
+<Keyword name="$P6G" value="1.0"/>
+<Keyword name="$P6E" value="0,0"/>
+<Keyword name="$P6B" value="32"/>
+<Keyword name="CST BASELINE DATE" value="2017-09-05T09:15:01-07:00"/>
+<Keyword name="LASER3ASF" value="0.72"/>
+<Keyword name="P5MS" value="0"/>
+<Keyword name="$P5V" value="333"/>
+<Keyword name="$BEGINANALYSIS" value="0"/>
+<Keyword name="TUBE NAME" value="Ab"/>
+<Keyword name="LASER1NAME" value="Blue"/>
+<Keyword name="$P5R" value="262144"/>
+<Keyword name="P2BS" value="0"/>
+<Keyword name="$ETIM" value="10:31:31"/>
+<Keyword name="$MODE" value="L"/>
+<Keyword name="$P5N" value="SSC-A"/>
+<Keyword name="$CELLS" value="Ab"/>
+<Keyword name="$P5G" value="1.0"/>
+<Keyword name="$P5E" value="0,0"/>
+<Keyword name="$OP" value="FACS User"/>
+<Keyword name="$P5B" value="32"/>
+<Keyword name="SPILL" value="2,FITC-A,APC-A,1,0,0,1"/>
+<Keyword name="P1MS" value="0"/>
+<Keyword name="$BEGINSTEXT" value="0"/>
+<Keyword name="$SYS" value="Windows 7 6.1"/>
+<Keyword name="$DATATYPE" value="F"/>
+<Keyword name="P7BS" value="-1"/>
+<Keyword name="$ENDANALYSIS" value="0"/>
+<Keyword name="P5DISPLAY" value="LIN"/>
+<Keyword name="$P4V" value="60"/>
+<Keyword name="$TIMESTEP" value="0.01"/>
+<Keyword name="$PAR" value="9"/>
+<Keyword name="$P4R" value="262144"/>
+<Keyword name="$ENDSTEXT" value="0"/>
+<Keyword name="LASER2ASF" value="0.65"/>
+<Keyword name="$P4N" value="FSC-H"/>
+<Keyword name="$NEXTDATA" value="0"/>
+<Keyword name="LASER2DELAY" value="40.43"/>
+<Keyword name="P2DISPLAY" value="LIN"/>
+<Keyword name="P6MS" value="0"/>
+<Keyword name="P6DISPLAY" value="LIN"/>
+<Keyword name="CST REGULATORY STATUS" value="RUO Performance Check"/>
+<Keyword name="$EXP" value="Zhang, Yunxiao"/>
+<Keyword name="$P4G" value="1.0"/>
+<Keyword name="$P4E" value="0,0"/>
+<Keyword name="P3BS" value="0"/>
+<Keyword name="$P4B" value="32"/>
+<Keyword name="P3DISPLAY" value="LIN"/>
+<Keyword name="$SRC" value="Specimen_001"/>
+<Keyword name="$INST" value=" "/>
+<Keyword name="WINDOW EXTENSION" value="2.0"/>
+<Keyword name="CYTOMETER CONFIG CREATE DATE" value="2016-12-14T11:58:29-08:00"/>
+<Keyword name="$P3V" value="60"/>
+<Keyword name="$PROJ" value="20171023_Ptc"/>
+<Keyword name="$P3R" value="262144"/>
+<Keyword name="P2MS" value="0"/>
+<Keyword name="P8BS" value="15"/>
+<Keyword name="P8DISPLAY" value="LOG"/>
+<Keyword name="$P3N" value="FSC-W"/>
+<Keyword name="EXPERIMENT NAME" value="20171023_Ptc"/>
+<Keyword name="EXPORT TIME" value="23-OCT-2017-10:31:21"/>
+<Keyword name="$P3G" value="1.0"/>
+<Keyword name="$P9V" value="528"/>
+<Keyword name="LASER2NAME" value="Red"/>
+<Keyword name="$P3E" value="0,0"/>
+<Keyword name="EXPORT USER NAME" value="Yunxiao"/>
+<Keyword name="CYTOMETER CONFIG NAME" value="New Configuration 6B 3Red 3 V 70um"/>
+<Keyword name="$P9R" value="262144"/>
+<Keyword name="LASER1ASF" value="0.72"/>
+<Keyword name="$P3B" value="32"/>
+<Keyword name="P9DISPLAY" value="LOG"/>
+<Keyword name="$P9N" value="APC-A"/>
+<Keyword name="P7MS" value="0"/>
+<Keyword name="$DATE" value="24-OCT-2017"/>
+<Keyword name="$BYTEORD" value="4,3,2,1"/>
+<Keyword name="$P9G" value="1.0"/>
+<Keyword name="$P2V" value="60"/>
+<Keyword name="P4BS" value="-1"/>
+<Keyword name="$P9E" value="0,0"/>
+<Keyword name="$P2R" value="262144"/>
+<Keyword name="$P9B" value="32"/>
+<Keyword name="FSC ASF" value="0.71"/>
+<Keyword name="$P2N" value="FSC-A"/>
+<Keyword name="$ENDDATA" value="362559"/>
+<Keyword name="THRESHOLD" value="FSC,5000"/>
+<Keyword name="$P2G" value="1.0"/>
+<Keyword name="$P8V" value="440"/>
+<Keyword name="$P2E" value="0,0"/>
+<Keyword name="P3MS" value="0"/>
+<Keyword name="$P8R" value="262144"/>
+<Keyword name="$P2B" value="32"/>
+<Keyword name="P9BS" value="28"/>
+<Keyword name="CREATOR" value="BD FACSDiva Software Version 8.0.1"/>
+<Keyword name="$P8N" value="FITC-A"/>
+<Keyword name="$CYT" value="Godzilla"/>
+<Keyword name="GUID" value="05602f78-b59d-4087-a01a-23a849f43140"/>
+<Keyword name="$P8G" value="1.0"/>
+<Keyword name="LASER3DELAY" value="-39.76"/>
+<Keyword name="SETTINGS" value="Cytometer"/>
+<Keyword name="$P8E" value="0,0"/>
+<Keyword name="$P1R" value="262144"/>
+<Keyword name="$P8B" value="32"/>
+<Keyword name="P8MS" value="0"/>
+<Keyword name="AUTOBS" value="TRUE"/>
+<Keyword name="$P1N" value="Time"/>
+<Keyword name="$BTIM" value="10:31:22"/>
+<Keyword name="P5BS" value="0"/>
+<Keyword name="$P1G" value="0.01"/>
+<Keyword name="$P7V" value="333"/>
+<Keyword name="CST PERFORMANCE EXPIRED" value="2017-10-24T10:01:43-07:00"/>
+<Keyword name="$P1E" value="0,0"/>
+<Keyword name="$P7R" value="262144"/>
+<Keyword name="$P1B" value="32"/>
+<Keyword name="CST BEADS EXPIRED" value="2"/>
+<Keyword name="$SMNO" value="1-2"/>
+<Keyword name="$P7N" value="SSC-H"/>
+<Keyword name="CST BEADS LOT ID" value="70106"/>
+<Keyword name="LASER3NAME" value="Violet"/>
+<Keyword name="$P7G" value="1.0"/>
+<Keyword name="P4MS" value="0"/>
+<Keyword name="$P7E" value="0,0"/>
+<Keyword name="$FIL" value="36473.fcs"/>
+<Keyword name="LASER1DELAY" value="0.0"/>
+<Keyword name="$P7B" value="32"/>
+</Keywords>
+<DataSet sampleID="2" uri="https://FACSDATA.Stanford.EDU:8443/ERS/data/o%3DStanford%20University/ou%3DStem%20Cell%20Institute/uid%3Dyunxiao/journal%3DGodzilla/session%3D4045/file%3D1-2.fcs"/>
+</Sample>
+<Sample>
+<Keywords>
+<Keyword name="P1BS" value="0"/>
+<Keyword name="CST SETUP STATUS" value="SUCCESS WITH WARNING"/>
+<Keyword name="$BEGINDATA" value="2560"/>
+<Keyword name="$P6V" value="333"/>
+<Keyword name="SPECIMEN NAME" value="Specimen_001"/>
+<Keyword name="$P6R" value="262144"/>
+<Keyword name="P9MS" value="0"/>
+<Keyword name="$TOT" value="10000              "/>
+<Keyword name="CST SETUP DATE" value="2017-10-23T10:01:43-07:00"/>
+<Keyword name="$P6N" value="SSC-W"/>
+<Keyword name="APPLY COMPENSATION" value="TRUE"/>
+<Keyword name="P6BS" value="0"/>
+<Keyword name="$P6G" value="1.0"/>
+<Keyword name="$P6E" value="0,0"/>
+<Keyword name="$P6B" value="32"/>
+<Keyword name="CST BASELINE DATE" value="2017-09-05T09:15:01-07:00"/>
+<Keyword name="LASER3ASF" value="0.72"/>
+<Keyword name="P5MS" value="0"/>
+<Keyword name="$P5V" value="333"/>
+<Keyword name="$BEGINANALYSIS" value="0"/>
+<Keyword name="TUBE NAME" value="t0"/>
+<Keyword name="LASER1NAME" value="Blue"/>
+<Keyword name="$P5R" value="262144"/>
+<Keyword name="P2BS" value="0"/>
+<Keyword name="$ETIM" value="10:51:38"/>
+<Keyword name="$MODE" value="L"/>
+<Keyword name="$P5N" value="SSC-A"/>
+<Keyword name="$CELLS" value="t0"/>
+<Keyword name="$P5G" value="1.0"/>
+<Keyword name="$P5E" value="0,0"/>
+<Keyword name="$OP" value="FACS User"/>
+<Keyword name="$P5B" value="32"/>
+<Keyword name="SPILL" value="2,FITC-A,APC-A,1,0,0,1"/>
+<Keyword name="P1MS" value="0"/>
+<Keyword name="$BEGINSTEXT" value="0"/>
+<Keyword name="$SYS" value="Windows 7 6.1"/>
+<Keyword name="$DATATYPE" value="F"/>
+<Keyword name="P7BS" value="-1"/>
+<Keyword name="$ENDANALYSIS" value="0"/>
+<Keyword name="P5DISPLAY" value="LIN"/>
+<Keyword name="$P4V" value="60"/>
+<Keyword name="$TIMESTEP" value="0.01"/>
+<Keyword name="$PAR" value="9"/>
+<Keyword name="$P4R" value="262144"/>
+<Keyword name="$ENDSTEXT" value="0"/>
+<Keyword name="LASER2ASF" value="0.65"/>
+<Keyword name="$P4N" value="FSC-H"/>
+<Keyword name="$NEXTDATA" value="0"/>
+<Keyword name="LASER2DELAY" value="40.43"/>
+<Keyword name="P2DISPLAY" value="LIN"/>
+<Keyword name="P6MS" value="0"/>
+<Keyword name="P6DISPLAY" value="LIN"/>
+<Keyword name="CST REGULATORY STATUS" value="RUO Performance Check"/>
+<Keyword name="$EXP" value="Zhang, Yunxiao"/>
+<Keyword name="$P4G" value="1.0"/>
+<Keyword name="$P4E" value="0,0"/>
+<Keyword name="P3BS" value="0"/>
+<Keyword name="$P4B" value="32"/>
+<Keyword name="P3DISPLAY" value="LIN"/>
+<Keyword name="$SRC" value="Specimen_001"/>
+<Keyword name="$INST" value=" "/>
+<Keyword name="WINDOW EXTENSION" value="2.0"/>
+<Keyword name="CYTOMETER CONFIG CREATE DATE" value="2016-12-14T11:58:29-08:00"/>
+<Keyword name="$P3V" value="60"/>
+<Keyword name="$PROJ" value="20171023_Ptc"/>
+<Keyword name="$P3R" value="262144"/>
+<Keyword name="P2MS" value="0"/>
+<Keyword name="P8BS" value="15"/>
+<Keyword name="P8DISPLAY" value="LOG"/>
+<Keyword name="$P3N" value="FSC-W"/>
+<Keyword name="EXPERIMENT NAME" value="20171023_Ptc"/>
+<Keyword name="EXPORT TIME" value="23-OCT-2017-10:51:35"/>
+<Keyword name="$P3G" value="1.0"/>
+<Keyword name="$P9V" value="528"/>
+<Keyword name="LASER2NAME" value="Red"/>
+<Keyword name="$P3E" value="0,0"/>
+<Keyword name="EXPORT USER NAME" value="Yunxiao"/>
+<Keyword name="CYTOMETER CONFIG NAME" value="New Configuration 6B 3Red 3 V 70um"/>
+<Keyword name="$P9R" value="262144"/>
+<Keyword name="LASER1ASF" value="0.72"/>
+<Keyword name="$P3B" value="32"/>
+<Keyword name="P9DISPLAY" value="LOG"/>
+<Keyword name="$P9N" value="APC-A"/>
+<Keyword name="P7MS" value="0"/>
+<Keyword name="$DATE" value="24-OCT-2017"/>
+<Keyword name="$BYTEORD" value="4,3,2,1"/>
+<Keyword name="$P9G" value="1.0"/>
+<Keyword name="$P2V" value="60"/>
+<Keyword name="P4BS" value="-1"/>
+<Keyword name="$P9E" value="0,0"/>
+<Keyword name="$P2R" value="262144"/>
+<Keyword name="$P9B" value="32"/>
+<Keyword name="FSC ASF" value="0.71"/>
+<Keyword name="$P2N" value="FSC-A"/>
+<Keyword name="$ENDDATA" value="362559"/>
+<Keyword name="THRESHOLD" value="FSC,5000"/>
+<Keyword name="$P2G" value="1.0"/>
+<Keyword name="$P8V" value="440"/>
+<Keyword name="$P2E" value="0,0"/>
+<Keyword name="P3MS" value="0"/>
+<Keyword name="$P8R" value="262144"/>
+<Keyword name="$P2B" value="32"/>
+<Keyword name="P9BS" value="31"/>
+<Keyword name="CREATOR" value="BD FACSDiva Software Version 8.0.1"/>
+<Keyword name="$P8N" value="FITC-A"/>
+<Keyword name="$CYT" value="Godzilla"/>
+<Keyword name="GUID" value="c5d65f35-b955-4b33-ad50-5cc1f26e155a"/>
+<Keyword name="$P8G" value="1.0"/>
+<Keyword name="LASER3DELAY" value="-39.76"/>
+<Keyword name="SETTINGS" value="Cytometer"/>
+<Keyword name="$P8E" value="0,0"/>
+<Keyword name="$P1R" value="262144"/>
+<Keyword name="$P8B" value="32"/>
+<Keyword name="P8MS" value="0"/>
+<Keyword name="AUTOBS" value="TRUE"/>
+<Keyword name="$P1N" value="Time"/>
+<Keyword name="$BTIM" value="10:58:35"/>
+<Keyword name="P5BS" value="0"/>
+<Keyword name="$P1G" value="0.01"/>
+<Keyword name="$P7V" value="333"/>
+<Keyword name="CST PERFORMANCE EXPIRED" value="2017-10-24T10:01:43-07:00"/>
+<Keyword name="$P1E" value="0,0"/>
+<Keyword name="$P7R" value="262144"/>
+<Keyword name="$P1B" value="32"/>
+<Keyword name="CST BEADS EXPIRED" value="2"/>
+<Keyword name="$SMNO" value="1-3"/>
+<Keyword name="$P7N" value="SSC-H"/>
+<Keyword name="CST BEADS LOT ID" value="70106"/>
+<Keyword name="LASER3NAME" value="Violet"/>
+<Keyword name="$P7G" value="1.0"/>
+<Keyword name="P4MS" value="0"/>
+<Keyword name="$P7E" value="0,0"/>
+<Keyword name="$FIL" value="36475.fcs"/>
+<Keyword name="LASER1DELAY" value="0.0"/>
+<Keyword name="$P7B" value="32"/>
+</Keywords>
+<DataSet sampleID="3" uri="https://FACSDATA.Stanford.EDU:8443/ERS/data/o%3DStanford%20University/ou%3DStem%20Cell%20Institute/uid%3Dyunxiao/journal%3DGodzilla/session%3D4045/file%3D1-3.fcs"/>
+</Sample>
+<Sample>
+<Keywords>
+<Keyword name="P1BS" value="0"/>
+<Keyword name="CST SETUP STATUS" value="SUCCESS WITH WARNING"/>
+<Keyword name="$BEGINDATA" value="2560"/>
+<Keyword name="$P6V" value="333"/>
+<Keyword name="SPECIMEN NAME" value="Specimen_001"/>
+<Keyword name="$P6R" value="262144"/>
+<Keyword name="P9MS" value="0"/>
+<Keyword name="$TOT" value="10000              "/>
+<Keyword name="CST SETUP DATE" value="2017-10-23T10:01:43-07:00"/>
+<Keyword name="$P6N" value="SSC-W"/>
+<Keyword name="APPLY COMPENSATION" value="TRUE"/>
+<Keyword name="P6BS" value="0"/>
+<Keyword name="$P6G" value="1.0"/>
+<Keyword name="$P6E" value="0,0"/>
+<Keyword name="$P6B" value="32"/>
+<Keyword name="CST BASELINE DATE" value="2017-09-05T09:15:01-07:00"/>
+<Keyword name="LASER3ASF" value="0.72"/>
+<Keyword name="P5MS" value="0"/>
+<Keyword name="$P5V" value="333"/>
+<Keyword name="$BEGINANALYSIS" value="0"/>
+<Keyword name="TUBE NAME" value="t10"/>
+<Keyword name="LASER1NAME" value="Blue"/>
+<Keyword name="$P5R" value="262144"/>
+<Keyword name="P2BS" value="0"/>
+<Keyword name="$ETIM" value="21:25:27"/>
+<Keyword name="$MODE" value="L"/>
+<Keyword name="$P5N" value="SSC-A"/>
+<Keyword name="$CELLS" value="t10"/>
+<Keyword name="$P5G" value="1.0"/>
+<Keyword name="$P5E" value="0,0"/>
+<Keyword name="$OP" value="FACS User"/>
+<Keyword name="$P5B" value="32"/>
+<Keyword name="SPILL" value="2,FITC-A,APC-A,1,0,0,1"/>
+<Keyword name="P1MS" value="0"/>
+<Keyword name="$BEGINSTEXT" value="0"/>
+<Keyword name="$SYS" value="Windows 7 6.1"/>
+<Keyword name="$DATATYPE" value="F"/>
+<Keyword name="P7BS" value="-1"/>
+<Keyword name="$ENDANALYSIS" value="0"/>
+<Keyword name="P5DISPLAY" value="LIN"/>
+<Keyword name="$P4V" value="60"/>
+<Keyword name="$TIMESTEP" value="0.01"/>
+<Keyword name="$PAR" value="9"/>
+<Keyword name="$P4R" value="262144"/>
+<Keyword name="$ENDSTEXT" value="0"/>
+<Keyword name="LASER2ASF" value="0.65"/>
+<Keyword name="$P4N" value="FSC-H"/>
+<Keyword name="$NEXTDATA" value="0"/>
+<Keyword name="LASER2DELAY" value="40.43"/>
+<Keyword name="P2DISPLAY" value="LIN"/>
+<Keyword name="P6MS" value="0"/>
+<Keyword name="P6DISPLAY" value="LIN"/>
+<Keyword name="CST REGULATORY STATUS" value="RUO Performance Check"/>
+<Keyword name="$EXP" value="Zhang, Yunxiao"/>
+<Keyword name="$P4G" value="1.0"/>
+<Keyword name="$P4E" value="0,0"/>
+<Keyword name="P3BS" value="0"/>
+<Keyword name="$P4B" value="32"/>
+<Keyword name="P3DISPLAY" value="LIN"/>
+<Keyword name="$SRC" value="Specimen_001"/>
+<Keyword name="$INST" value=" "/>
+<Keyword name="WINDOW EXTENSION" value="2.0"/>
+<Keyword name="CYTOMETER CONFIG CREATE DATE" value="2016-12-14T11:58:29-08:00"/>
+<Keyword name="$P3V" value="60"/>
+<Keyword name="$PROJ" value="20171023_Ptc"/>
+<Keyword name="$P3R" value="262144"/>
+<Keyword name="P2MS" value="0"/>
+<Keyword name="P8BS" value="8"/>
+<Keyword name="P8DISPLAY" value="LOG"/>
+<Keyword name="$P3N" value="FSC-W"/>
+<Keyword name="EXPERIMENT NAME" value="20171023_Ptc"/>
+<Keyword name="EXPORT TIME" value="23-OCT-2017-21:25:24"/>
+<Keyword name="$P3G" value="1.0"/>
+<Keyword name="$P9V" value="528"/>
+<Keyword name="LASER2NAME" value="Red"/>
+<Keyword name="$P3E" value="0,0"/>
+<Keyword name="EXPORT USER NAME" value="Yunxiao"/>
+<Keyword name="CYTOMETER CONFIG NAME" value="New Configuration 6B 3Red 3 V 70um"/>
+<Keyword name="$P9R" value="262144"/>
+<Keyword name="LASER1ASF" value="0.72"/>
+<Keyword name="$P3B" value="32"/>
+<Keyword name="P9DISPLAY" value="LOG"/>
+<Keyword name="$P9N" value="APC-A"/>
+<Keyword name="P7MS" value="0"/>
+<Keyword name="$DATE" value="24-OCT-2017"/>
+<Keyword name="$BYTEORD" value="4,3,2,1"/>
+<Keyword name="$P9G" value="1.0"/>
+<Keyword name="$P2V" value="60"/>
+<Keyword name="P4BS" value="-1"/>
+<Keyword name="$P9E" value="0,0"/>
+<Keyword name="$P2R" value="262144"/>
+<Keyword name="$P9B" value="32"/>
+<Keyword name="FSC ASF" value="0.71"/>
+<Keyword name="$P2N" value="FSC-A"/>
+<Keyword name="$ENDDATA" value="362559"/>
+<Keyword name="THRESHOLD" value="FSC,5000"/>
+<Keyword name="$P2G" value="1.0"/>
+<Keyword name="$P8V" value="440"/>
+<Keyword name="$P2E" value="0,0"/>
+<Keyword name="P3MS" value="0"/>
+<Keyword name="$P8R" value="262144"/>
+<Keyword name="$P2B" value="32"/>
+<Keyword name="P9BS" value="19"/>
+<Keyword name="CREATOR" value="BD FACSDiva Software Version 8.0.1"/>
+<Keyword name="$P8N" value="FITC-A"/>
+<Keyword name="$CYT" value="Godzilla"/>
+<Keyword name="GUID" value="38a4a0d7-7969-43bf-8608-ede97c9e41bc"/>
+<Keyword name="$P8G" value="1.0"/>
+<Keyword name="LASER3DELAY" value="-39.76"/>
+<Keyword name="SETTINGS" value="Cytometer"/>
+<Keyword name="$P8E" value="0,0"/>
+<Keyword name="$P1R" value="262144"/>
+<Keyword name="$P8B" value="32"/>
+<Keyword name="P8MS" value="0"/>
+<Keyword name="AUTOBS" value="TRUE"/>
+<Keyword name="$P1N" value="Time"/>
+<Keyword name="$BTIM" value="21:25:24"/>
+<Keyword name="P5BS" value="0"/>
+<Keyword name="$P1G" value="0.01"/>
+<Keyword name="$P7V" value="333"/>
+<Keyword name="CST PERFORMANCE EXPIRED" value="2017-10-24T10:01:43-07:00"/>
+<Keyword name="$P1E" value="0,0"/>
+<Keyword name="$P7R" value="262144"/>
+<Keyword name="$P1B" value="32"/>
+<Keyword name="CST BEADS EXPIRED" value="2"/>
+<Keyword name="$SMNO" value="1-4"/>
+<Keyword name="$P7N" value="SSC-H"/>
+<Keyword name="CST BEADS LOT ID" value="70106"/>
+<Keyword name="LASER3NAME" value="Violet"/>
+<Keyword name="$P7G" value="1.0"/>
+<Keyword name="P4MS" value="0"/>
+<Keyword name="$P7E" value="0,0"/>
+<Keyword name="$FIL" value="36816.fcs"/>
+<Keyword name="LASER1DELAY" value="0.0"/>
+<Keyword name="$P7B" value="32"/>
+</Keywords>
+<DataSet sampleID="4" uri="https://FACSDATA.Stanford.EDU:8443/ERS/data/o%3DStanford%20University/ou%3DStem%20Cell%20Institute/uid%3Dyunxiao/journal%3DGodzilla/session%3D4045/file%3D1-4.fcs"/>
+</Sample>
+<Sample>
+<Keywords>
+<Keyword name="P1BS" value="0"/>
+<Keyword name="CST SETUP STATUS" value="SUCCESS WITH WARNING"/>
+<Keyword name="CYTNUM" value="P46900002"/>
+<Keyword name="$BEGINDATA" value="2560"/>
+<Keyword name="$P6V" value="333"/>
+<Keyword name="SPECIMEN NAME" value="Specimen_001"/>
+<Keyword name="$P6R" value="262144"/>
+<Keyword name="P9MS" value="0"/>
+<Keyword name="$TOT" value="30000              "/>
+<Keyword name="CST SETUP DATE" value="2017-10-23T10:01:43-07:00"/>
+<Keyword name="$P6N" value="SSC-W"/>
+<Keyword name="APPLY COMPENSATION" value="TRUE"/>
+<Keyword name="P6BS" value="0"/>
+<Keyword name="$P6G" value="1.0"/>
+<Keyword name="$P6E" value="0,0"/>
+<Keyword name="$P6B" value="32"/>
+<Keyword name="CST BASELINE DATE" value="2017-09-05T09:15:01-07:00"/>
+<Keyword name="LASER3ASF" value="0.75"/>
+<Keyword name="P5MS" value="0"/>
+<Keyword name="$P5V" value="333"/>
+<Keyword name="$BEGINANALYSIS" value="0"/>
+<Keyword name="TUBE NAME" value="t20"/>
+<Keyword name="LASER1NAME" value="Blue"/>
+<Keyword name="$P5R" value="262144"/>
+<Keyword name="P2BS" value="0"/>
+<Keyword name="$ETIM" value="07:26:24"/>
+<Keyword name="$MODE" value="L"/>
+<Keyword name="$P5N" value="SSC-A"/>
+<Keyword name="$CELLS" value="t20"/>
+<Keyword name="$P5G" value="1.0"/>
+<Keyword name="$P5E" value="0,0"/>
+<Keyword name="$OP" value="FACS User"/>
+<Keyword name="$P5B" value="32"/>
+<Keyword name="SPILL" value="2,FITC-A,APC-A,1,0,0,1"/>
+<Keyword name="P1MS" value="0"/>
+<Keyword name="$BEGINSTEXT" value="0"/>
+<Keyword name="$SYS" value="Windows 7 6.1"/>
+<Keyword name="$DATATYPE" value="F"/>
+<Keyword name="P7BS" value="-1"/>
+<Keyword name="$ENDANALYSIS" value="0"/>
+<Keyword name="P5DISPLAY" value="LIN"/>
+<Keyword name="$P4V" value="60"/>
+<Keyword name="$TIMESTEP" value="0.01"/>
+<Keyword name="$PAR" value="9"/>
+<Keyword name="$P4R" value="262144"/>
+<Keyword name="$ENDSTEXT" value="0"/>
+<Keyword name="$P4N" value="FSC-H"/>
+<Keyword name="$NEXTDATA" value="0"/>
+<Keyword name="LASER2ASF" value="0.66"/>
+<Keyword name="P2DISPLAY" value="LIN"/>
+<Keyword name="LASER2DELAY" value="40.98"/>
+<Keyword name="P6MS" value="0"/>
+<Keyword name="P6DISPLAY" value="LIN"/>
+<Keyword name="$EXP" value="Zhang, Yunxiao"/>
+<Keyword name="CST REGULATORY STATUS" value="RUO Performance Check"/>
+<Keyword name="$P4G" value="1.0"/>
+<Keyword name="$P4E" value="0,0"/>
+<Keyword name="P3BS" value="0"/>
+<Keyword name="$P4B" value="32"/>
+<Keyword name="P3DISPLAY" value="LIN"/>
+<Keyword name="$SRC" value="Specimen_001"/>
+<Keyword name="$INST" value=" "/>
+<Keyword name="WINDOW EXTENSION" value="2.0"/>
+<Keyword name="$P3V" value="60"/>
+<Keyword name="CYTOMETER CONFIG CREATE DATE" value="2016-12-14T11:58:29-08:00"/>
+<Keyword name="$PROJ" value="20171023_Ptc"/>
+<Keyword name="$P3R" value="262144"/>
+<Keyword name="P2MS" value="0"/>
+<Keyword name="P8BS" value="3"/>
+<Keyword name="P8DISPLAY" value="LOG"/>
+<Keyword name="$P3N" value="FSC-W"/>
+<Keyword name="EXPERIMENT NAME" value="20171023_Ptc"/>
+<Keyword name="EXPORT TIME" value="24-OCT-2017-07:25:08"/>
+<Keyword name="$P3G" value="1.0"/>
+<Keyword name="$P9V" value="528"/>
+<Keyword name="LASER2NAME" value="Red"/>
+<Keyword name="$P3E" value="0,0"/>
+<Keyword name="EXPORT USER NAME" value="Yunxiao"/>
+<Keyword name="$P9R" value="262144"/>
+<Keyword name="CYTOMETER CONFIG NAME" value="New Configuration 6B 3Red 3 V 70um"/>
+<Keyword name="LASER1ASF" value="0.72"/>
+<Keyword name="$P3B" value="32"/>
+<Keyword name="P9DISPLAY" value="LOG"/>
+<Keyword name="$P9N" value="APC-A"/>
+<Keyword name="P7MS" value="0"/>
+<Keyword name="$DATE" value="24-OCT-2017"/>
+<Keyword name="$BYTEORD" value="4,3,2,1"/>
+<Keyword name="$P9G" value="1.0"/>
+<Keyword name="$P2V" value="60"/>
+<Keyword name="P4BS" value="-1"/>
+<Keyword name="$P9E" value="0,0"/>
+<Keyword name="$P2R" value="262144"/>
+<Keyword name="$P9B" value="32"/>
+<Keyword name="FSC ASF" value="0.71"/>
+<Keyword name="$P2N" value="FSC-A"/>
+<Keyword name="$ENDDATA" value="1082559"/>
+<Keyword name="THRESHOLD" value="FSC,5000"/>
+<Keyword name="$P2G" value="1.0"/>
+<Keyword name="$P8V" value="440"/>
+<Keyword name="$P2E" value="0,0"/>
+<Keyword name="P3MS" value="0"/>
+<Keyword name="$P8R" value="262144"/>
+<Keyword name="$P2B" value="32"/>
+<Keyword name="P9BS" value="25"/>
+<Keyword name="CREATOR" value="BD FACSDiva Software Version 8.0.1"/>
+<Keyword name="$P8N" value="FITC-A"/>
+<Keyword name="GUID" value="176d264b-2714-477f-aa60-fff45ddcbf0a"/>
+<Keyword name="$CYT" value="Godzilla"/>
+<Keyword name="$P8G" value="1.0"/>
+<Keyword name="SETTINGS" value="Cytometer"/>
+<Keyword name="LASER3DELAY" value="-39.2"/>
+<Keyword name="$P8E" value="0,0"/>
+<Keyword name="$P1R" value="262144"/>
+<Keyword name="$P8B" value="32"/>
+<Keyword name="P8MS" value="0"/>
+<Keyword name="AUTOBS" value="TRUE"/>
+<Keyword name="$P1N" value="Time"/>
+<Keyword name="$BTIM" value="09:11:43"/>
+<Keyword name="P5BS" value="0"/>
+<Keyword name="$P1G" value="0.01"/>
+<Keyword name="$P7V" value="333"/>
+<Keyword name="CST PERFORMANCE EXPIRED" value="2017-10-24T10:01:43-07:00"/>
+<Keyword name="$P1E" value="0,0"/>
+<Keyword name="$P7R" value="262144"/>
+<Keyword name="$P1B" value="32"/>
+<Keyword name="CST BEADS EXPIRED" value="2"/>
+<Keyword name="$SMNO" value="1-5"/>
+<Keyword name="$P7N" value="SSC-H"/>
+<Keyword name="CST BEADS LOT ID" value="70106"/>
+<Keyword name="LASER3NAME" value="Violet"/>
+<Keyword name="$P7G" value="1.0"/>
+<Keyword name="P4MS" value="0"/>
+<Keyword name="$P7E" value="0,0"/>
+<Keyword name="$FIL" value="36818.fcs"/>
+<Keyword name="LASER1DELAY" value="0.0"/>
+<Keyword name="$P7B" value="32"/>
+</Keywords>
+<DataSet sampleID="5" uri="https://FACSDATA.Stanford.EDU:8443/ERS/data/o%3DStanford%20University/ou%3DStem%20Cell%20Institute/uid%3Dyunxiao/journal%3DGodzilla/session%3D4045/file%3D1-5.fcs"/>
+</Sample>
+<Sample>
+<Keywords>
+<Keyword name="P1BS" value="0"/>
+<Keyword name="CST SETUP STATUS" value="SUCCESS WITH WARNING"/>
+<Keyword name="$BEGINDATA" value="2560"/>
+<Keyword name="$P6V" value="333"/>
+<Keyword name="SPECIMEN NAME" value="Specimen_001"/>
+<Keyword name="$P6R" value="262144"/>
+<Keyword name="P9MS" value="0"/>
+<Keyword name="$TOT" value="50000              "/>
+<Keyword name="CST SETUP DATE" value="2017-10-23T10:01:43-07:00"/>
+<Keyword name="$P6N" value="SSC-W"/>
+<Keyword name="APPLY COMPENSATION" value="TRUE"/>
+<Keyword name="P6BS" value="0"/>
+<Keyword name="$P6G" value="1.0"/>
+<Keyword name="$P6E" value="0,0"/>
+<Keyword name="$P6B" value="32"/>
+<Keyword name="CST BASELINE DATE" value="2017-09-05T09:15:01-07:00"/>
+<Keyword name="LASER3ASF" value="0.75"/>
+<Keyword name="P5MS" value="0"/>
+<Keyword name="$P5V" value="333"/>
+<Keyword name="$BEGINANALYSIS" value="0"/>
+<Keyword name="TUBE NAME" value="t24"/>
+<Keyword name="LASER1NAME" value="Blue"/>
+<Keyword name="$P5R" value="262144"/>
+<Keyword name="P2BS" value="0"/>
+<Keyword name="$ETIM" value="11:46:39"/>
+<Keyword name="$MODE" value="L"/>
+<Keyword name="$P5N" value="SSC-A"/>
+<Keyword name="$CELLS" value="t24"/>
+<Keyword name="$P5G" value="1.0"/>
+<Keyword name="$P5E" value="0,0"/>
+<Keyword name="$OP" value="FACS User"/>
+<Keyword name="$P5B" value="32"/>
+<Keyword name="SPILL" value="2,FITC-A,APC-A,1,0,0,1"/>
+<Keyword name="P1MS" value="0"/>
+<Keyword name="$BEGINSTEXT" value="0"/>
+<Keyword name="$SYS" value="Windows 7 6.1"/>
+<Keyword name="$DATATYPE" value="F"/>
+<Keyword name="P7BS" value="-1"/>
+<Keyword name="$ENDANALYSIS" value="0"/>
+<Keyword name="P5DISPLAY" value="LIN"/>
+<Keyword name="$P4V" value="60"/>
+<Keyword name="$TIMESTEP" value="0.01"/>
+<Keyword name="$PAR" value="9"/>
+<Keyword name="$P4R" value="262144"/>
+<Keyword name="$ENDSTEXT" value="0"/>
+<Keyword name="LASER2ASF" value="0.6600000262260437"/>
+<Keyword name="$P4N" value="FSC-H"/>
+<Keyword name="$NEXTDATA" value="0"/>
+<Keyword name="LASER2DELAY" value="40.97999954223633"/>
+<Keyword name="P2DISPLAY" value="LIN"/>
+<Keyword name="P6MS" value="0"/>
+<Keyword name="P6DISPLAY" value="LIN"/>
+<Keyword name="CST REGULATORY STATUS" value="RUO Performance Check"/>
+<Keyword name="$EXP" value="Zhang, Yunxiao"/>
+<Keyword name="$P4G" value="1.0"/>
+<Keyword name="$P4E" value="0,0"/>
+<Keyword name="P3BS" value="0"/>
+<Keyword name="$P4B" value="32"/>
+<Keyword name="P3DISPLAY" value="LIN"/>
+<Keyword name="$SRC" value="Specimen_001"/>
+<Keyword name="$INST" value=" "/>
+<Keyword name="WINDOW EXTENSION" value="2.0"/>
+<Keyword name="CYTOMETER CONFIG CREATE DATE" value="2016-12-14T11:58:29-08:00"/>
+<Keyword name="$P3V" value="60"/>
+<Keyword name="$PROJ" value="20171023_Ptc"/>
+<Keyword name="$P3R" value="262144"/>
+<Keyword name="P2MS" value="0"/>
+<Keyword name="P8BS" value="22"/>
+<Keyword name="P8DISPLAY" value="LOG"/>
+<Keyword name="$P3N" value="FSC-W"/>
+<Keyword name="EXPERIMENT NAME" value="20171023_Ptc"/>
+<Keyword name="EXPORT TIME" value="24-OCT-2017-11:46:33"/>
+<Keyword name="$P3G" value="1.0"/>
+<Keyword name="$P9V" value="528"/>
+<Keyword name="LASER2NAME" value="Red"/>
+<Keyword name="$P3E" value="0,0"/>
+<Keyword name="EXPORT USER NAME" value="Yunxiao"/>
+<Keyword name="CYTOMETER CONFIG NAME" value="New Configuration 6B 3Red 3 V 70um"/>
+<Keyword name="$P9R" value="262144"/>
+<Keyword name="LASER1ASF" value="0.7200000286102295"/>
+<Keyword name="$P3B" value="32"/>
+<Keyword name="P9DISPLAY" value="LOG"/>
+<Keyword name="$P9N" value="APC-A"/>
+<Keyword name="P7MS" value="0"/>
+<Keyword name="$DATE" value="24-OCT-2017"/>
+<Keyword name="$BYTEORD" value="4,3,2,1"/>
+<Keyword name="$P9G" value="1.0"/>
+<Keyword name="$P2V" value="60"/>
+<Keyword name="P4BS" value="-1"/>
+<Keyword name="$P9E" value="0,0"/>
+<Keyword name="$P2R" value="262144"/>
+<Keyword name="$P9B" value="32"/>
+<Keyword name="FSC ASF" value="0.71"/>
+<Keyword name="$P2N" value="FSC-A"/>
+<Keyword name="$ENDDATA" value="1802559"/>
+<Keyword name="THRESHOLD" value="FSC,5000"/>
+<Keyword name="$P2G" value="1.0"/>
+<Keyword name="$P8V" value="440"/>
+<Keyword name="$P2E" value="0,0"/>
+<Keyword name="P3MS" value="0"/>
+<Keyword name="$P8R" value="262144"/>
+<Keyword name="$P2B" value="32"/>
+<Keyword name="P9BS" value="34"/>
+<Keyword name="CREATOR" value="BD FACSDiva Software Version 8.0.1"/>
+<Keyword name="$P8N" value="FITC-A"/>
+<Keyword name="$CYT" value="Godzilla"/>
+<Keyword name="GUID" value="638fdd5b-1d17-42e7-8aba-82e1a04fa6a6"/>
+<Keyword name="$P8G" value="1.0"/>
+<Keyword name="LASER3DELAY" value="-39.20000076293945"/>
+<Keyword name="SETTINGS" value="Cytometer"/>
+<Keyword name="$P8E" value="0,0"/>
+<Keyword name="$P1R" value="262144"/>
+<Keyword name="$P8B" value="32"/>
+<Keyword name="P8MS" value="0"/>
+<Keyword name="AUTOBS" value="TRUE"/>
+<Keyword name="$P1N" value="Time"/>
+<Keyword name="$BTIM" value="13:59:48"/>
+<Keyword name="P5BS" value="0"/>
+<Keyword name="$P1G" value="0.01"/>
+<Keyword name="$P7V" value="333"/>
+<Keyword name="CST PERFORMANCE EXPIRED" value="2017-10-24T10:01:43-07:00"/>
+<Keyword name="$P1E" value="0,0"/>
+<Keyword name="$P7R" value="262144"/>
+<Keyword name="$P1B" value="32"/>
+<Keyword name="CST BEADS EXPIRED" value="2"/>
+<Keyword name="$SMNO" value="1-6"/>
+<Keyword name="$P7N" value="SSC-H"/>
+<Keyword name="CST BEADS LOT ID" value="70106"/>
+<Keyword name="LASER3NAME" value="Violet"/>
+<Keyword name="$P7G" value="1.0"/>
+<Keyword name="P4MS" value="0"/>
+<Keyword name="$P7E" value="0,0"/>
+<Keyword name="$FIL" value="36837.fcs"/>
+<Keyword name="LASER1DELAY" value="0.0"/>
+<Keyword name="$P7B" value="32"/>
+</Keywords>
+<DataSet sampleID="6" uri="https://FACSDATA.Stanford.EDU:8443/ERS/data/o%3DStanford%20University/ou%3DStem%20Cell%20Institute/uid%3Dyunxiao/journal%3DGodzilla/session%3D4045/file%3D1-6.fcs"/>
+</Sample>
+</SampleList>
+</Workspace>

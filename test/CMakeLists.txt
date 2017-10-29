@@ -4,6 +4,7 @@ target_link_libraries(unit_test gtest_main gtest facs_io)
 
 add_custom_target (tests
   COMMAND ${CMAKE_CURRENT_BINARY_DIR}/unit_test
-  DEPENDS libfacs_io)
+  DEPENDS libfacs_io
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/data)
 
 add_test (NAME unit_tests COMMAND unit_test)

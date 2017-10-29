@@ -73,5 +73,3 @@ if (TESTING)
   # etc. as appropriate
 
 endif (TESTING)
-
-
