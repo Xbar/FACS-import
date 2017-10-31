@@ -5,6 +5,20 @@
 #include "test_helper.h"
 #include "base/error.h"
 
+using namespace std;
+// Read all contents in a file
+string read_file_contents(const char* filename)
+{
+  string line, result;
+  ifstream myfile(filename);
+  if (myfile.is_open())
+  {
+    while (getline(myfile, line))
+      result += line;
+  }
+  return result;
+}
+
 // Return next node with the tag name as the param
 rapidxml::xml_node<>* CTagFinder::get_next_tag(const char* tagname)
 {

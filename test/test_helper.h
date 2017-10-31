@@ -5,7 +5,10 @@
 #include <vector>
 #include <list>
 #include <stack>
+#include <string>
 #include "rapidxml.hpp"
+
+std::string read_file_contents(const char* filename);
 
 class CTagFinder
 {
