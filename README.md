@@ -17,12 +17,15 @@ CytoBank can be accessed at http://facsdata.stanford.edu:8080/ERS/user/HomePage.
 You will need to log in with your account.
 
 At CytoBank Data Backup Server, choose an experiment and then click "Inspect" to see the files.
+![alt text](https://github.com/Xbar/FACS-import/raw/master/doc/cytobank1.png)
 
-Download the wsp file and the xml file to your computer.
+Then download the wsp file and the xml file to your computer.
+![alt text](https://github.com/Xbar/FACS-import/raw/master/doc/cytobank1.png)
 
-Then provide the files to the program.
+The program will ask for these two files and also the location of the new file to write to.
 
-
+After the conversion, just open the newly generated wsp file in FlowJo. 
+It should contain all gates in from the BD FacsDiva experiment.
 
 ## For developers
 
