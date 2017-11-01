@@ -3,7 +3,8 @@ Import BDFacsDIVA project into FlowJo
 
 ## Instructions
 The application is located in MacOSRelease
-![alt_text](https://github.com/Xbar/FACS-import/tree/master/MacOSRelease)
+![a link](https://github.com/Xbar/FACS-import/tree/master/MacOSRelease)
+
 Please download and unzip the files.
 
 "Antique" is for old MacOS versions, e.g. Mavericks.
