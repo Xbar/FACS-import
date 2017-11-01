@@ -21,7 +21,7 @@ At CytoBank Data Backup Server, choose an experiment and then click "Inspect" to
 ![alt text](doc/cytobank1.png)
 
 Then download the wsp file and the xml file to your computer.
-![alt text](doc/cytobank1.png)
+![alt text](doc/cytobank2.png)
 
 The program will ask for these two files and also the location of the new file to write to.
 
