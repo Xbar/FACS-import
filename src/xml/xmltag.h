@@ -27,8 +27,8 @@ namespace xml_process
       {}
     ~CXmlPathBuilder() {}
 
-    void read_xml(const char* filename);
-    void write_xml(const char* filename);
+    int read_xml(const char* filename);
+    int write_xml(const char* filename);
     std::shared_ptr<rapidxml::xml_document<> > get_doc();
 
     rapidxml::xml_node<>* get_child(const rapidxml::xml_node<>* parent,
@@ -48,7 +48,7 @@ namespace xml_process
       const char* attrib_name, const char* attrib_value);
 
     attrib_list get_attrib_list(const rapidxml::xml_node<>* node);
-    void set_attrib_list(rapidxml::xml_node<>* node,
+    int set_attrib_list(rapidxml::xml_node<>* node,
       const attrib_list& attributes);
 
   private:

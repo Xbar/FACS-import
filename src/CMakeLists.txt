@@ -1,6 +1,6 @@
 FILE(GLOB_RECURSE LIBFACS_SRC *.${CXX_SRC_SUFFIX})
 FILE(GLOB_RECURSE LIBFACS_HEADER *.${CXX_HEADER_SUFFIX})
-#list(REMOVE_ITEM LIBFACS_SRC "bd2flowjo.cpp")
+#list(REMOVE_ITEM LIBFACS_SRC "app.cpp")
 
 add_library(libfacs_io OBJECT ${LIBFACS_SRC})
 set_target_properties(libfacs_io PROPERTIES
@@ -8,7 +8,7 @@ set_target_properties(libfacs_io PROPERTIES
 
 add_library(facs_io STATIC $<TARGET_OBJECTS:libfacs_io>)
 
-add_executable(bd2flowjo bd2flowjo.cpp)
+add_executable(bd2flowjo app.cpp)
 target_link_libraries(bd2flowjo facs_io)
 
 INSTALL(TARGETS facs_io

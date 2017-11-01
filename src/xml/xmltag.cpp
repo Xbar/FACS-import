@@ -10,14 +10,18 @@
 namespace xml_process
 {
   // Read XML file
-  void CXmlPathBuilder::read_xml(const char* filename)
+  int CXmlPathBuilder::read_xml(const char* filename)
   {
     FILE* fp = fopen(filename, "r");
-    FACS_IO_REQUIRE(fp, "Cannot open file %s.", filename);
+    //FACS_IO_REQUIRE(fp, "Cannot open file %s.", filename);
+    if (!fp)
+      return -1;
     fseek(fp, 0, SEEK_END);
     size_t file_size = ftell(fp);
     fseek(fp, 0, SEEK_SET);
-    FACS_IO_REQUIRE(file_size > 0, "File %s is empty.", filename);
+    if (file_size < 1)
+      return -2;
+    //FACS_IO_REQUIRE(file_size > 0, "File %s is empty.", filename);
     xml_content = std::make_shared<std::vector<char>>();
     xml_content -> resize(file_size + 1);
 
@@ -27,18 +31,23 @@ namespace xml_process
 
     xml_doc = std::make_shared<rapidxml::xml_document<> >();
     xml_doc -> parse<0>(xml_data);
+
+    return 0;
   }
 
   // Output XML file
-  void CXmlPathBuilder::write_xml(const char* filename)
+  int CXmlPathBuilder::write_xml(const char* filename)
   {
     FILE* fp = fopen(filename, "w");
-    FACS_IO_REQUIRE(fp, "Cannot open file %s for write.", filename);
+    //FACS_IO_REQUIRE(fp, "Cannot open file %s for write.", filename);
+    if (!fp)
+      return -1;
     std::string xml_data;
 
     rapidxml::print(std::back_inserter(xml_data), *xml_doc, rapidxml::print_no_indenting);
     fwrite(xml_data.c_str(), sizeof(char), xml_data.length(), fp);
     fclose(fp);
+    return 0;
   }
 
   // Return the child node with a given name
@@ -188,13 +197,15 @@ namespace xml_process
   }
 
   // Set all attributes
-  void CXmlPathBuilder::set_attrib_list(rapidxml::xml_node<>* node,
+  int CXmlPathBuilder::set_attrib_list(rapidxml::xml_node<>* node,
     const attrib_list& attributes)
   {
     for (auto iter = attributes.begin(); iter != attributes.end(); iter++)
     {
-      set_attrib(node, (iter -> name).c_str(), (iter -> value).c_str());
+      if(!set_attrib(node, (iter -> name).c_str(), (iter -> value).c_str()))
+        return -1;
     }
+    return 0;
   }
 
   char* CXmlPathBuilder::allocate_xml_string(const char* str)
