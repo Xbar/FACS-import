@@ -93,3 +93,12 @@ TEST(XML_IO, create_attributes)
     EXPECT_EQ(iter -> value, iter2 -> value);
   }
 }
+
+TEST(XML_IO, write_null)
+{
+  const char xml_file[] = "flowjo.xml";
+  CXmlPathBuilder my_xml;
+  my_xml.read_xml(xml_file);
+  int retval = my_xml.write_xml("");
+  EXPECT_EQ(-1, retval);
+}

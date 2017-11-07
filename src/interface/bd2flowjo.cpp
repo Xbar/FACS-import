@@ -53,7 +53,7 @@ extern "C" int bd2flowjo(const char* bd_file, const char* flowjo_file,
   }
 
   auto ret_val = flow_xml.write_xml(output_file);
-  if (!ret_val)
+  if (ret_val != 0)
     return -4;
   return 0;
 }
