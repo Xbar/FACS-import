@@ -123,12 +123,11 @@ namespace xml_process
       }
       else if (strcmp("x_parameter_scale_value", node -> name()) == 0)
       {
-        zero_cross_x = atof(node -> value());
+        zero_cross_x = -atof(node -> value());
       }
-
       else if (strcmp("y_parameter_scale_value", node -> name()) == 0)
       {
-        zero_cross_y = atof(node -> value());
+        zero_cross_y = -atof(node -> value());
       }
       else if (strcmp("input", node -> name()) == 0)
       {
