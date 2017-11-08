@@ -7,6 +7,46 @@
 
 namespace xml_process
 {
+  const double LINEAR_TRANSITION_POINT = 100;
+  const double LINEAR_TRANSITION_VALUE = 10;
+  const double EXP_SLOPE = 905;
+  const double DISPLAY_MAX = (1 << 18);
+  const double PARAMETER_MAX = 4095;
+  // Logistic weight
+  // half_point: where weight is 0.5
+  // Slope: Divide x by slope to get shallower change
+  double logistic_weight(double x, double half_point, double slope)
+  {
+    return 1.0 / (1.0 + pow(10.0, (half_point - x) / slope));
+  }
+
+  // Linear function
+  // zero_cross: intercept on y
+  // point_x, point_y: another point on the line
+  double linear_value(double x, double zero_cross, double point_x, double point_y)
+  {
+    return (point_y - zero_cross) / point_x * x + zero_cross;
+  }
+
+  // Exponential function
+  // Slope: divide x by slope to get shallower curve
+  // x_max: x range, 0 - x_max
+  // y_max: y range, 0 - y_max
+  double exp_value(double x, double slope, double x_max, double y_max)
+  {
+    double b = log10(y_max) - x_max / slope;
+    return pow(10.0, x / slope + b);
+  }
+
+  // Smoothened biexp function
+  double smoothened_biexp(double x, double zero_cross)
+  {
+    double weight = logistic_weight(x, LINEAR_TRANSITION_POINT, EXP_SLOPE);
+    return weight * exp_value(x, EXP_SLOPE, PARAMETER_MAX, DISPLAY_MAX) +
+      (1 - weight) * linear_value(x, zero_cross, LINEAR_TRANSITION_POINT,
+        LINEAR_TRANSITION_VALUE);
+  }
+
   // Parse gate paramters from BD gate node
   void CGateBase::read_bd_gate(const rapidxml::xml_node<>* bd_gate)
   {
@@ -81,22 +121,28 @@ namespace xml_process
       {
         log_y = (*(node -> value()) == 't');
       }
+      else if (strcmp("x_parameter_scale_value", node -> name()) == 0)
+      {
+        zero_cross_x = atof(node -> value());
+      }
+
+      else if (strcmp("y_parameter_scale_value", node -> name()) == 0)
+      {
+        zero_cross_y = atof(node -> value());
+      }
       else if (strcmp("input", node -> name()) == 0)
       {
         gate_input = node -> value();
       }
     }
     if (biexp_x)
-    {
-      transform_biexp(gate_x);
-    }
-    if (biexp_y)
-    {
-      transform_biexp(gate_y);
-    }
-    if (log_x)
+      transform_biexp(gate_x, zero_cross_x);
+    else if (log_x)
       transform_log(gate_x);
-    if (log_y)
+
+    if (biexp_y)
+      transform_biexp(gate_y, zero_cross_y);
+    else if (log_y)
       transform_log(gate_y);
     gate_id = "ID" + std::to_string(rand());
 
@@ -132,11 +178,11 @@ namespace xml_process
   }
 
   // Transform biexp coordinates to log
-  void CGateBase::transform_biexp(std::list<double>& coords)
+  void CGateBase::transform_biexp(std::list<double>& coords, double zero_cross)
   {
     for (auto iter = coords.begin(); iter != coords.end(); iter++)
     {
-      (*iter) = (*iter) / 1000.0 + 0.9;
+      (*iter) = smoothened_biexp(*iter, zero_cross);
     }
   }
 
@@ -191,6 +237,13 @@ namespace xml_process
       {"owningGroup", "All Samples"},
       {"expanded", "1"}};
     builder.set_attrib_list(current_node, current_attrib);
+    // Set graph attrib
+    auto graph_node = builder.add_child(current_node, "Graph");
+    builder.set_attrib(graph_node, "type", "Pseudocolor");
+    auto axis_node = builder.add_child(graph_node, "Axis");
+    builder.set_attrib_list(axis_node, {{"dimension", "x"}, {"name", label_x}});
+    axis_node = builder.add_child(graph_node, "Axis");
+    builder.set_attrib_list(axis_node, {{"dimension", "y"}, {"name", label_y}});
     // Build Gate node
     current_node = builder.add_child(current_node, "Gate");
     builder.set_attrib(current_node, "gating:id", gate_id.c_str());

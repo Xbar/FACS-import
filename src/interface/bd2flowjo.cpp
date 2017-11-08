@@ -34,6 +34,7 @@ extern "C" int bd2flowjo(const char* bd_file, const char* flowjo_file,
     write_node; write_node = write_node -> next_sibling())
   {
     auto sample_node = flow_xml.add_child(write_node, "SampleNode");
+    flow_xml.set_attrib(sample_node, "expanded", "1");
     gate_tree.write_gates(sample_node, flow_xml);
     auto dataset_node = flow_xml.get_child(write_node, "DataSet");
     if (!dataset_node)
