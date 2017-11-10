@@ -44,7 +44,7 @@ namespace xml_process
       return -1;
     std::string xml_data;
 
-    rapidxml::print(std::back_inserter(xml_data), *xml_doc, rapidxml::print_no_indenting);
+    rapidxml::print(std::back_inserter(xml_data), *xml_doc, 0);//rapidxml::print_no_indenting);
     fwrite(xml_data.c_str(), sizeof(char), xml_data.length(), fp);
     fclose(fp);
     return 0;
@@ -89,10 +89,45 @@ namespace xml_process
     {
       auto node = get_child(parent, tagname);
       if (node)
-        node -> value(value);
+      {
+        if (value)
+        {
+          auto xml_value = allocate_xml_string(value);
+          node -> value(xml_value);
+        }
+      }
       else
         node = add_child(parent, tagname, value);
       return node;
+    }
+    return nullptr;
+  }
+
+  // Get sibling node with a tag name
+  rapidxml::xml_node<>* CXmlPathBuilder::get_sibling(const rapidxml::xml_node<>* node,
+                                                      const char* tagname)
+  {
+    if (node)
+    {
+      for(auto sib = node -> next_sibling(); sib;
+        sib = sib -> next_sibling())
+      {
+        if (strcmp(sib -> name(), tagname) == 0)
+          return sib;
+      }
+    }
+    return nullptr;
+  }
+
+  // Add sibling node with a tag name
+  rapidxml::xml_node<>* CXmlPathBuilder::add_sibling(rapidxml::xml_node<>* node,
+                                                      const char* tagname,
+                                                    const char* value)
+  {
+    if (node)
+    {
+      auto parent = node -> parent();
+      return add_child(parent, tagname, value);
     }
     return nullptr;
   }
@@ -102,7 +137,7 @@ namespace xml_process
   CXmlPathBuilder::get_attrib(const rapidxml::xml_node<>* node,
     const char* name)
   {
-    if (node)
+    if (node && name)
     {
       for (auto attrib = node -> first_attribute(); attrib;
         attrib = attrib -> next_attribute())
@@ -121,12 +156,13 @@ namespace xml_process
   CXmlPathBuilder::set_attrib(rapidxml::xml_node<>* node,
     const char* name, const char* value)
   {
-    if (node)
+    if (node && name && value)
     {
       auto attrib = get_attrib(node, name);
       if (attrib)
       {
-        attrib -> value(value);
+        auto xml_value = allocate_xml_string(value);
+        attrib -> value(xml_value);
         return attrib;
       }
       attrib = allocate_xml_attribute(name, value);

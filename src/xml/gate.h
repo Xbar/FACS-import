@@ -15,13 +15,15 @@ namespace xml_process
   {
   public:
     CGateBase(): gate_x(std::list<double>()), gate_y(std::list<double>()),
-      log_x(0), log_y(0), zero_cross_x(0), zero_cross_y(0),
+      log_x(0), log_y(0), x_to_min(0), y_to_min(0),
+      zero_cross_x(0), zero_cross_y(0),
       label_x(""), label_y(""),
       gate_name(""), gate_id(""), gate_input(""), gate_parent(""),
       parent_id(""), gate_type("")
     {}
     CGateBase(const CGateBase& other): gate_x(other.gate_x), gate_y(other.gate_y),
       log_x(other.log_x), log_y(other.log_y),
+      x_to_min(other.x_to_min), y_to_min(other.y_to_min),
       zero_cross_x(other.zero_cross_x), zero_cross_y(other.zero_cross_y),
       label_x(other.label_x), label_y(other.label_y),
       gate_name(other.gate_name), gate_id(other.gate_id),
@@ -30,6 +32,7 @@ namespace xml_process
     {}
     CGateBase(CGateBase&& other): gate_x(other.gate_x), gate_y(other.gate_y),
       log_x(other.log_x), log_y(other.log_y),
+      x_to_min(other.x_to_min), y_to_min(other.y_to_min),
       zero_cross_x(other.zero_cross_x), zero_cross_y(other.zero_cross_y),
       label_x(other.label_x), label_y(other.label_y),
       gate_name(other.gate_name), gate_id(other.gate_id),
@@ -69,6 +72,7 @@ namespace xml_process
   protected:
     std::list<double> gate_x, gate_y;
     bool log_x, log_y;
+    bool x_to_min, y_to_min; // Binner gate direction, towards 0 or toward max
     double zero_cross_x, zero_cross_y;
     std::string label_x, label_y;
     std::string gate_name, gate_id, gate_input, gate_parent;
@@ -82,8 +86,13 @@ namespace xml_process
       CXmlPathBuilder& builder);
     void build_rectangle_gate(rapidxml::xml_node<>* position,
       CXmlPathBuilder& builder);
+    void build_binner_gate(rapidxml::xml_node<>* position,
+      CXmlPathBuilder& builder);
     void build_interval_gate(rapidxml::xml_node<>* position,
       CXmlPathBuilder& builder);
+    void build_graph_node(rapidxml::xml_node<>* position,
+      CXmlPathBuilder& builder, const std::string& x_lab,
+      const std::string& y_lab);
   };
 /*
   ///////////////////////////////////////////////////////////////////////////////

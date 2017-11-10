@@ -9,8 +9,6 @@
 
 namespace xml_process
 {
-  std::vector<CGateBase> read_all_gates(const char* bd_file);
-
   class CGateTree
   {
   public:

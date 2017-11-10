@@ -37,6 +37,10 @@ namespace xml_process
             const char* tagname, const char* value=nullptr);
     rapidxml::xml_node<>* update_child(rapidxml::xml_node<>* parent,
             const char* tagname, const char* value=nullptr);
+    rapidxml::xml_node<>* get_sibling(const rapidxml::xml_node<>* node,
+        const char* tagname);
+    rapidxml::xml_node<>* add_sibling(rapidxml::xml_node<>* node,
+            const char* tagname, const char* value=nullptr);
     rapidxml::xml_node<>* goto_path(const xmlpath& path,
       const rapidxml::xml_node<>* base=nullptr);
     rapidxml::xml_node<>* build_path(const xmlpath& path,

@@ -102,3 +102,24 @@ TEST(XML_IO, write_null)
   int retval = my_xml.write_xml("");
   EXPECT_EQ(-1, retval);
 }
+
+TEST(XML_IO, attrib_list)
+{
+  const char xml_file[] = "flowjo.xml";
+  CXmlPathBuilder my_xml;
+  my_xml.read_xml(xml_file);
+  auto node = my_xml.goto_path({"Workspace", "SampleList", "Sample"});
+  EXPECT_TRUE(node != nullptr);
+  node = my_xml.add_child(node, "Axis");
+  EXPECT_TRUE(node != nullptr);
+  my_xml.set_attrib_list(node, {{"dimension", "y"}, {"name", "FSC-A"}});
+  auto attrib = my_xml.get_attrib(node, "dimension");
+  EXPECT_STREQ(attrib -> value(), "y");
+  attrib = my_xml.get_attrib(node, "name");
+  EXPECT_STREQ(attrib -> value(), "FSC-A");
+  my_xml.set_attrib_list(node, {{"dimension", "x"}, {"name", "SSC-A"}});
+  attrib = my_xml.get_attrib(node, "dimension");
+  EXPECT_STREQ(attrib -> value(), "x");
+  attrib = my_xml.get_attrib(node, "name");
+  EXPECT_STREQ(attrib -> value(), "SSC-A");
+}

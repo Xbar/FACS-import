@@ -134,15 +134,7 @@ namespace xml_process
         gate_input = node -> value();
       }
     }
-    if (biexp_x)
-      transform_biexp(gate_x, zero_cross_x);
-    else if (log_x)
-      transform_log(gate_x);
 
-    if (biexp_y)
-      transform_biexp(gate_y, zero_cross_y);
-    else if (log_y)
-      transform_log(gate_y);
     gate_id = "ID" + std::to_string(rand());
 
     // Rectangle gate
@@ -155,18 +147,29 @@ namespace xml_process
     // Sub gate in binner gate
     if ((gate_input != gate_parent) && gate_x.size() == 4)
     {
-      gate_type = "RECTANGLE_REGION";
+      gate_type = "BINNER_REGION";
       transform_rect(gate_x);
       transform_rect(gate_y);
       if (gate_x.front() < 11)
-        gate_x.front() = -1;
+        x_to_min = 1;
       else
-        gate_x.back() = -1;
+        x_to_min = 0;
       if (gate_y.front() < 11)
-        gate_y.front() = -1;
+        y_to_min = 1;
       else
-        gate_y.back() = -1;
+        y_to_min = 0;
     }
+
+    // Convert log scale & biexp scale
+    if (biexp_x)
+      transform_biexp(gate_x, zero_cross_x);
+    else if (log_x)
+      transform_log(gate_x);
+
+    if (biexp_y)
+      transform_biexp(gate_y, zero_cross_y);
+    else if (log_y)
+      transform_log(gate_y);
 
     auto split_pos = gate_input.rfind('\\');
     if (split_pos != std::string::npos)
@@ -223,12 +226,14 @@ namespace xml_process
   rapidxml::xml_node<>* CGateBase::write_flowjo_gate(rapidxml::xml_node<>* position,
     CXmlPathBuilder& builder)
   {
+    build_graph_node(position, builder, label_x, label_y);
+    // Add subpopulation node
     auto current_node = builder.get_child(position, "Subpopulations");
     if (!current_node)
     {
-      builder.add_child(position, "Subpopulations");
-      current_node = builder.get_child(position, "Subpopulations");
+      current_node = builder.add_child(position, "Subpopulations");
     }
+    // Add population node
     current_node = builder.add_child(current_node, "Population");
     // Build population node
     auto pop_node = current_node;
@@ -236,13 +241,8 @@ namespace xml_process
       {"owningGroup", "All Samples"},
       {"expanded", "1"}};
     builder.set_attrib_list(current_node, current_attrib);
-    // Set graph attrib
-    auto graph_node = builder.add_child(current_node, "Graph");
-    builder.set_attrib(graph_node, "type", "Pseudocolor");
-    auto axis_node = builder.add_child(graph_node, "Axis");
-    builder.set_attrib_list(axis_node, {{"dimension", "x"}, {"name", label_x}});
-    axis_node = builder.add_child(graph_node, "Axis");
-    builder.set_attrib_list(axis_node, {{"dimension", "y"}, {"name", label_y}});
+    // Add graph node here
+    build_graph_node(pop_node, builder, label_x, label_y);
     // Build Gate node
     current_node = builder.add_child(current_node, "Gate");
     builder.set_attrib(current_node, "gating:id", gate_id.c_str());
@@ -251,6 +251,8 @@ namespace xml_process
     // Build gating based on gate type
     if (gate_type == "POLYGON_REGION")
       build_polygon_gate(current_node, builder);
+    else if (gate_type == "BINNER_REGION")
+      build_binner_gate(current_node, builder);
     else if (gate_type == "RECTANGLE_REGION")
       build_rectangle_gate(current_node, builder);
     else if (gate_type == "INTERVAL_REGION")
@@ -258,6 +260,46 @@ namespace xml_process
     else
       FACS_IO_ERROR("Unsupported gate type %s.", gate_type.c_str());
     return pop_node;
+  }
+
+  void CGateBase::build_graph_node(rapidxml::xml_node<>* position,
+    CXmlPathBuilder& builder, const std::string& x_lab,
+    const std::string& y_lab)
+  {
+    // Set graph attrib
+    auto graph_node = builder.get_child(position, "Graph");
+    if (!graph_node)
+    {
+      graph_node = builder.add_child(position, "Graph");
+      builder.set_attrib_list(graph_node, {{"type", "Pseudocolor"},
+        {"backColor", "#ffffff"}, {"foreColor", "#000000"},
+        {"smoothing", "0"}, {"fast", "1"}});
+      auto axis_node = builder.add_child(graph_node, "Axis");
+      builder.set_attrib_list(axis_node, {{"dimension", "x"}, {"name", x_lab}});
+      axis_node = builder.add_child(graph_node, "Axis");
+      builder.set_attrib_list(axis_node, {{"dimension", "y"}, {"name", y_lab}});
+      auto setting_node = builder.add_child(graph_node, "GraphSettings");
+      builder.set_attrib_list(setting_node, {{"level", "5%%"},
+      {"smoothingHighResolution", "1"}, {"contourHighResolution", "1"},
+      {"histogramSmoothingCount", "0"}, {"graphResolution", "256"},
+      {"showOutliers", "1"}, {"drawLargeDots", "0"}, {"dotsToDraw", "8000"},
+      {"tint", "le.chartfill.tinted.40"}, {"lineWeight", "le.lineweight.normal"},
+      {"lineStyle", "le.linestyle.solid"}});
+    }
+    else
+    {
+      auto axis_node = builder.update_child(graph_node, "Axis");
+      FACS_IO_REQUIRE(axis_node, "Fail to get axis node.");
+      //if (!axis_node)
+      //  axis_node = builder.add_child(graph_node, "Axis");
+      builder.set_attrib_list(axis_node, {{"dimension", "x"}, {"name", x_lab}});
+      axis_node = builder.get_sibling(axis_node, "Axis");
+      if (!axis_node)
+      {
+        axis_node = builder.add_child(graph_node, "Axis");
+      }
+      builder.set_attrib_list(axis_node, {{"dimension", "y"}, {"name", y_lab}});
+    }
   }
 
   // Generate a node with polygon gate parameters
@@ -322,6 +364,39 @@ namespace xml_process
     if (gate_y.back() >= 0)
       builder.set_attrib(param_node, "gating:max",
         std::to_string(gate_y.back()).c_str());
+    sub_param = builder.add_child(param_node, "data-type:fcs-dimension");
+    builder.set_attrib(sub_param, "data-type:name", label_y.c_str());
+  }
+
+  // Generate a node with binner gate parameters
+  void CGateBase::build_binner_gate(rapidxml::xml_node<>* position,
+    CXmlPathBuilder& builder)
+  {
+    auto current_node = builder.add_child(position, "gating:RectangleGate");
+    builder.set_attrib_list(current_node, {{"eventsInside", "1"}, {"annoOffsetX", "0"},
+      {"annoOffsetY", "0"}, {"tint", "#000000"}, {"isTinted", "0"},
+      {"lineWeight", "Normal"}, {"userDefined", "1"}, {"quadId", "-1"},
+      {"gateResolution", "256"}});
+
+    // Build gating parameters
+    // x label
+    auto param_node = builder.add_child(current_node, "gating:dimension");
+    if (x_to_min)
+      builder.set_attrib(param_node, "gating:max",
+        std::to_string(gate_x.back()).c_str());
+    else
+      builder.set_attrib(param_node, "gating:min",
+        std::to_string(gate_x.front()).c_str());
+    auto sub_param = builder.add_child(param_node, "data-type:fcs-dimension");
+    builder.set_attrib(sub_param, "data-type:name", label_x.c_str());
+    // y label
+    param_node = builder.add_child(current_node, "gating:dimension");
+    if (y_to_min)
+      builder.set_attrib(param_node, "gating:max",
+        std::to_string(gate_y.back()).c_str());
+    else
+      builder.set_attrib(param_node, "gating:min",
+        std::to_string(gate_y.front()).c_str());
     sub_param = builder.add_child(param_node, "data-type:fcs-dimension");
     builder.set_attrib(sub_param, "data-type:name", label_y.c_str());
   }

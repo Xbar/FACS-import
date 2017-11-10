@@ -5,6 +5,7 @@
 #include "xml/xmltag.h"
 #include "xml/gate.h"
 #include "xml/gate_tree.h"
+#include "xml/utility.h"
 
 using namespace xml_process;
 
@@ -17,8 +18,13 @@ extern "C" int bd2flowjo(const char* bd_file, const char* flowjo_file,
     return -1;
   if (flow_xml.read_xml(flowjo_file) != 0)
     return -2;
+  auto sample_list = read_all_samples(flowjo_file);
+  if (sample_list.size() < 1)
+    return -2;
 
   CGateTree gate_tree(gates);
+  auto workspace_node = flow_xml.goto_path({"Workspace"});
+  flow_xml.set_attrib(workspace_node, "flowJoVersion", "10.0");
   auto write_node = flow_xml.build_path({"Workspace", "Groups", "GroupNode"});
   if (!write_node)
     return -3;
@@ -29,29 +35,30 @@ extern "C" int bd2flowjo(const char* bd_file, const char* flowjo_file,
   flow_xml.set_attrib_list(write_node, {{"name", "All Samples"},
     {"live", "1"}, {"role", "ws.group.dlog.test"}});
   auto sample_ref_node = flow_xml.add_child(write_node, "SampleRefs");
-  std::vector<std::string> sample_list;
-  for (write_node = flow_xml.goto_path({"Workspace", "SampleList", "Sample"});
-    write_node; write_node = write_node -> next_sibling())
+  for (auto sample: sample_list)
   {
-    auto sample_node = flow_xml.add_child(write_node, "SampleNode");
-    flow_xml.set_attrib(sample_node, "expanded", "1");
-    gate_tree.write_gates(sample_node, flow_xml);
-    auto dataset_node = flow_xml.get_child(write_node, "DataSet");
-    if (!dataset_node)
+    // Add sample reference in the group
+    auto ref_node = flow_xml.add_child(sample_ref_node, "SampleRef");
+    if (!ref_node)
       return -3;
-    auto sample_id = flow_xml.get_attrib(dataset_node, "sampleID");
-    if (!sample_id)
-      return -3;
-    flow_xml.set_attrib(sample_node, "name", sample_id -> value());
-    sample_list.push_back(sample_id -> value());
+    flow_xml.set_attrib(ref_node, "sampleID", sample.c_str());
   }
-  for (auto iter = sample_list.begin(); iter != sample_list.end(); iter++)
+  // Add gates to all samples
+  auto sample_node = flow_xml.goto_path({"Workspace", "SampleList",
+    "Sample"});
+  for (auto sample: sample_list)
   {
-    auto sample_node = flow_xml.add_child(sample_ref_node, "SampleRef");
     if (!sample_node)
       return -3;
-    flow_xml.set_attrib(sample_node, "sampleID", iter -> c_str());
+    auto sample_node_node = flow_xml.add_child(sample_node, "SampleNode");
+    if (!sample_node_node)
+      return -3;
+    flow_xml.set_attrib(sample_node_node, "expanded", "1");
+    gate_tree.write_gates(sample_node_node, flow_xml);
+    flow_xml.set_attrib(sample_node_node, "name", sample.c_str());
+    sample_node = sample_node -> next_sibling();
   }
+
 
   auto ret_val = flow_xml.write_xml(output_file);
   if (ret_val != 0)

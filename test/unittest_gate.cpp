@@ -10,7 +10,7 @@
 using namespace std;
 using namespace xml_process;
 
-TEST(GATE, write_flowjo)
+TEST(GATE, write_polygon)
 {
   const char xml_file[] = "bd.xml";
   CXmlPathBuilder my_xml;
@@ -30,10 +30,15 @@ TEST(GATE, write_flowjo)
     my_gate.read_bd_gate(node);
     auto write_node = flow_xml.goto_path({"Workspace", "SampleList", "Sample"});
     my_gate.write_flowjo_gate(write_node, flow_xml);
+    break;
   }
 
-  flow_xml.write_xml("gate.test.o");
-  string output = read_file_contents("gate.test.o");
-  string ans = read_file_contents("gate.out.xml");
-  EXPECT_EQ(ans, output);
+  // Now validate gate
+  auto gate = flow_xml.goto_path({"Workspace", "SampleList", "Sample"});
+  auto graph_node = flow_xml.get_child(gate, "Graph");
+  EXPECT_TRUE(graph_node != nullptr);
+  gate = flow_xml.goto_path({"Workspace", "SampleList", "Sample",
+  "Subpopulations", "Population"});
+  auto attrib = flow_xml.get_attrib(gate, "name");
+  EXPECT_STREQ(attrib -> value(), "P1");
 }
