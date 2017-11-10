@@ -2,7 +2,7 @@
 Import BDFacsDIVA project into FlowJo
 
 ## Instructions
-The application is located in [MacOSRelease](MacOS Release)
+The application is located in [MacOSRelease](MacOS%20Release)
 
 Please download and unzip the files.
 
