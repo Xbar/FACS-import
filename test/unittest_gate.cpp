@@ -10,6 +10,24 @@
 using namespace std;
 using namespace xml_process;
 
+class CGateTest: public CGateBase
+{
+public:
+  void test_biexp(list<double>& input, int zero_cross)
+  {
+    transform_biexp(input, zero_cross);
+  }
+  list<double>& get_x()
+  {
+    return gate_x;
+  }
+
+  list<double>& get_y()
+  {
+    return gate_y;
+  }
+};
+
 TEST(GATE, write_polygon)
 {
   const char xml_file[] = "bd.xml";
@@ -41,4 +59,43 @@ TEST(GATE, write_polygon)
   "Subpopulations", "Population"});
   auto attrib = flow_xml.get_attrib(gate, "name");
   EXPECT_STREQ(attrib -> value(), "P1");
+}
+
+TEST(GATE, biexp)
+{
+  CGateTest test;/*
+  list<double> biexp = {0, 100, 1000, 4000};
+  test.test_biexp(biexp, -15);
+  for (auto num: biexp)
+  {
+    cout << num << " ";
+  }
+  cout << "\n";*/
+
+  const char xml_file[] = "bd.xml";
+  CXmlPathBuilder my_xml;
+  my_xml.read_xml(xml_file);
+
+  for (auto node = my_xml.goto_path({"bdfacs", "experiment", "acquisition_worksheets",
+  "worksheet_template", "gates", "gate"}); node; node = node -> next_sibling())
+  {
+    auto type_attrib = my_xml.get_attrib(node, "type");
+    if ((!type_attrib) || (strcmp(type_attrib -> value(), "Region_Classifier")))
+      continue;
+
+    test.read_bd_gate(node);
+    if (test.get_name()[0] == 'Q')
+    {
+      for (auto num: test.get_x())
+      {
+        cout << num << " ";
+      }
+      cout << "\n";
+      for (auto num: test.get_y())
+      {
+        cout << num << " ";
+      }
+      cout << "\n";
+    }
+  }
 }

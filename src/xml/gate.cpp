@@ -150,11 +150,11 @@ namespace xml_process
       gate_type = "BINNER_REGION";
       transform_rect(gate_x);
       transform_rect(gate_y);
-      if (gate_x.front() < 11)
+      if (gate_x.front() < 0.1)
         x_to_min = 1;
       else
         x_to_min = 0;
-      if (gate_y.front() < 11)
+      if (gate_y.front() < 0.1)
         y_to_min = 1;
       else
         y_to_min = 0;
@@ -224,7 +224,7 @@ namespace xml_process
 
   // Generate a node with gate parameters
   rapidxml::xml_node<>* CGateBase::write_flowjo_gate(rapidxml::xml_node<>* position,
-    CXmlPathBuilder& builder)
+    CXmlPathBuilder& builder, std::string group_name)
   {
     build_graph_node(position, builder, label_x, label_y);
     // Add subpopulation node
@@ -238,7 +238,7 @@ namespace xml_process
     // Build population node
     auto pop_node = current_node;
     attrib_list current_attrib = {{"name", gate_name},
-      {"owningGroup", "All Samples"},
+      {"owningGroup", group_name},
       {"expanded", "1"}};
     builder.set_attrib_list(current_node, current_attrib);
     // Add graph node here
@@ -279,7 +279,7 @@ namespace xml_process
       axis_node = builder.add_child(graph_node, "Axis");
       builder.set_attrib_list(axis_node, {{"dimension", "y"}, {"name", y_lab}});
       auto setting_node = builder.add_child(graph_node, "GraphSettings");
-      builder.set_attrib_list(setting_node, {{"level", "5%%"},
+      builder.set_attrib_list(setting_node, {{"level", "5%"},
       {"smoothingHighResolution", "1"}, {"contourHighResolution", "1"},
       {"histogramSmoothingCount", "0"}, {"graphResolution", "256"},
       {"showOutliers", "1"}, {"drawLargeDots", "0"}, {"dotsToDraw", "8000"},

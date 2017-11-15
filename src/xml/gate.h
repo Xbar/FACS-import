@@ -47,7 +47,7 @@ namespace xml_process
     rapidxml::xml_node<>* write_bd_gate(rapidxml::xml_node<>* position,
       CXmlPathBuilder& builder);
     rapidxml::xml_node<>* write_flowjo_gate(rapidxml::xml_node<>* position,
-      CXmlPathBuilder& builder);
+      CXmlPathBuilder& builder, std::string group_name="");
 
     std::string get_parent()
     { return gate_parent; }

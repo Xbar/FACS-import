@@ -17,7 +17,8 @@ namespace xml_process
     CGateTree(CGateTree&) = delete;
     ~CGateTree() {};
 
-    void write_gates(rapidxml::xml_node<>* position, CXmlPathBuilder& builder);
+    void write_gates(rapidxml::xml_node<>* position, CXmlPathBuilder& builder,
+      std::string group_name="");
 
   private:
     std::vector<std::list<int>> tree;
@@ -26,7 +27,7 @@ namespace xml_process
 
     void build_tree();
     void write_tree(const int gate_idx, rapidxml::xml_node<>* position,
-      CXmlPathBuilder& builder);
+      CXmlPathBuilder& builder, std::string group_name="");
   };
 }
 

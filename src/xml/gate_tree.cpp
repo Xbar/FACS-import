@@ -34,23 +34,23 @@ namespace xml_process
   }
 
   void CGateTree::write_gates(rapidxml::xml_node<>* position,
-    CXmlPathBuilder& builder)
+    CXmlPathBuilder& builder, std::string group_name)
   {
     for (int i = 0; i < gates.size(); i++)
     {
       if (is_root[i])
-        write_tree(i, position, builder);
+        write_tree(i, position, builder, group_name);
     }
   }
 
   void CGateTree::write_tree(int gate_idx, rapidxml::xml_node<>* position,
-    CXmlPathBuilder& builder)
+    CXmlPathBuilder& builder, std::string group_name)
   {
-    auto next_pos = gates[gate_idx].write_flowjo_gate(position, builder);
+    auto next_pos = gates[gate_idx].write_flowjo_gate(position, builder, group_name);
     for (auto iter = tree[gate_idx].begin(); iter != tree[gate_idx].end();
       iter++)
     {
-      write_tree(*iter, next_pos, builder);
+      write_tree(*iter, next_pos, builder, group_name);
     }
   }
 

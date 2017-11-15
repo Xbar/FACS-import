@@ -25,7 +25,7 @@ extern "C" int bd2flowjo(const char* bd_file, const char* flowjo_file,
   CGateTree gate_tree(gates);
   auto workspace_node = flow_xml.goto_path({"Workspace"});
   flow_xml.set_attrib(workspace_node, "flowJoVersion", "10.0");
-  auto write_node = flow_xml.build_path({"Workspace", "Groups", "GroupNode"});
+  /*auto write_node = flow_xml.build_path({"Workspace", "Groups", "GroupNode"});
   if (!write_node)
     return -3;
   flow_xml.set_attrib_list(write_node, {{"name", "All Samples"},
@@ -42,7 +42,7 @@ extern "C" int bd2flowjo(const char* bd_file, const char* flowjo_file,
     if (!ref_node)
       return -3;
     flow_xml.set_attrib(ref_node, "sampleID", sample.c_str());
-  }
+  }*/
   // Add gates to all samples
   auto sample_node = flow_xml.goto_path({"Workspace", "SampleList",
     "Sample"});
