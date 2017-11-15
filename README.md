@@ -2,12 +2,14 @@
 Import BDFacsDIVA project into FlowJo
 
 ## Instructions
-The application is located in [MacOSRelease](MacOSRelease)
+The application is located in [MacOSRelease](MacOS%20Release)
 
 Please download and unzip the files.
 
 "Antique" is for old MacOS versions, e.g. Mavericks.
-"FACSconverter" is for newer versions, e.g. Sierra.
+
+"FACSconverter" is for newer versions, e.g. versions after Yosemite.
+
 
 Depending on your settings, Mac FileVault can block the application from running. In that case,
 right click on the Application Icon and select "Open".
@@ -20,7 +22,7 @@ You will need to log in with your account.
 At CytoBank Data Backup Server, choose an experiment and then click "Inspect" to see the files.
 ![alt text](doc/cytobank1.png)
 
-Then download the wsp file and the xml file to your computer.
+Then download the **wsp file** _and_ the **xml file** to your computer.
 ![alt text](doc/cytobank2.png)
 
 The program will ask for these two files and also the location of the new file to write to.
